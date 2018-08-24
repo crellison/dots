@@ -1,0 +1,13 @@
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
+
+# work
+source  $HOME/dotfiles/.work
+
+# python
+export PATH=/Users/{user}/Library/Python/2.7/bin:$PATH
+export PATH=/usr/local/lib/python2.7/site-packages:$PATH
+
+# good stuff
+source  $HOME/dotfiles/.aliases
+source  $HOME/dotfiles/.functions
