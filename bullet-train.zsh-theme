@@ -24,6 +24,8 @@ if [ ! -n "${BULLETTRAIN_PROMPT_ORDER+1}" ]; then
     context
     dir
     screen
+    virtualenv
+    aws
     git
     hg
     cmd_exec_time
@@ -82,7 +84,7 @@ if [ ! -n "${BULLETTRAIN_VIRTUALENV_BG+1}" ]; then
   BULLETTRAIN_VIRTUALENV_BG=yellow
 fi
 if [ ! -n "${BULLETTRAIN_VIRTUALENV_FG+1}" ]; then
-  BULLETTRAIN_VIRTUALENV_FG=white
+  BULLETTRAIN_VIRTUALENV_FG=black
 fi
 if [ ! -n "${BULLETTRAIN_VIRTUALENV_PREFIX+1}" ]; then
   BULLETTRAIN_VIRTUALENV_PREFIX=🐍
@@ -93,7 +95,7 @@ if [ ! -n "${BULLETTRAIN_NVM_BG+1}" ]; then
   BULLETTRAIN_NVM_BG=green
 fi
 if [ ! -n "${BULLETTRAIN_NVM_FG+1}" ]; then
-  BULLETTRAIN_NVM_FG=white
+  BULLETTRAIN_NVM_FG=black
 fi
 if [ ! -n "${BULLETTRAIN_NVM_PREFIX+1}" ]; then
   BULLETTRAIN_NVM_PREFIX="⬡ "
@@ -556,8 +558,6 @@ prompt_virtualenv() {
   local virtualenv_path="$VIRTUAL_ENV"
   if [[ -n $virtualenv_path && -n $VIRTUAL_ENV_DISABLE_PROMPT ]]; then
     prompt_segment $BULLETTRAIN_VIRTUALENV_BG $BULLETTRAIN_VIRTUALENV_FG $BULLETTRAIN_VIRTUALENV_PREFIX" $(basename $virtualenv_path)"
-  elif which pyenv &> /dev/null; then
-    prompt_segment $BULLETTRAIN_VIRTUALENV_BG $BULLETTRAIN_VIRTUALENV_FG $BULLETTRAIN_VIRTUALENV_PREFIX" $(pyenv version | sed -e 's/ (set.*$//' | tr '\n' ' ' | sed 's/.$//')"
   fi
 }
 
