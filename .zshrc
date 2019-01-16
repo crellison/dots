@@ -1,9 +1,9 @@
 export ZSH=$HOME/.oh-my-zsh
 export TERM="xterm-256color"
 
-ZSH_THEME="bullet-train"
-
 plugins=( zsh-autosuggestions )
+
+ZSH_THEME="bullet-train"
 
 # this goes before oh-my-zsh.sh is sourced
 ZSH_DISABLE_COMPFIX=true

@@ -8,6 +8,7 @@ set smartindent
 set tabstop=2
 set softtabstop=2
 set expandtab " tabs are spaces
+set shiftwidth=2
 " Strip whitespace in file manually
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 

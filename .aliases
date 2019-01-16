@@ -15,6 +15,18 @@ alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 
 alias sbp="source ~/.bash_profile"
 alias szp="source ~/.zshrc"
+
+# better cat
+alias cat="bat"
+
+# make zip recursive
+alias zip="zip -r"
+
+# copy current git branch
+alias cpbranch="git rev-parse --abbrev-ref HEAD | tr -d '[:space:]' | pbcopy"
+
+# fast grep
+alias fgrep="find . -type f | parallel -k -j150% -n 1000 -m grep -H -n"
 ### Stolen from Paul Irish dotfiles
 
 # GIT STUFF

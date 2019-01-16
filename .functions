@@ -1,18 +1,12 @@
-# kubernetes - switch context
-kctx() {
-    if [ "$#" == 0 ]
-    then
-        kubectl config get-contexts
-    else
-        kubectl config use-context "$@"
-    fi
-}
-
 # Create a new directory and enter it
 function md() {
 	mkdir -p "$@" && cd "$@"
 }
 
+# find what is on a port
+function whoson() {
+  lsof -t -i :"$@"
+}
 
 # find shorthand
 function f() {
