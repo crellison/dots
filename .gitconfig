@@ -1,0 +1,9 @@
+[user]
+	email = cole.ellison@gmail.com
+	name = Cole Ellison
+[rerere]
+	enabled = true
+[branch]
+	autosetuprebase = always
+[push]
+	default = current
