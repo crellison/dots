@@ -1,0 +1,35 @@
+### KUBERNETES HELP
+
+### ALIASES
+
+alias kls="kubectl get"
+alias krm="kubectl delete"
+alias kctx=kubectx
+alias kcat="kubectl describe"
+alias kcd="kubectl use"
+alias klog="kubectl logs"
+
+# copy name of resource
+
+kcp() {
+  kls "$1" | grep "$2" | sed 's/ .*//g' | pbcopy
+}
+
+# copy endpoints of a service
+
+kip() {
+  kcat svc "$1" | grep Endpoints | sed 's/^[^0-9]*//g' | pbcopy
+}
+
+# kubernetes - execute bash shell in pod
+
+kbash() {
+  kubectl exec -it "$@" -- /bin/bash
+}
+
+# set namespace in current context
+
+ksetns() {
+  CONTEXT="$(kubectl config current-context)"
+  kubectl config set-context $CONTEXT --namespace=$1
+}
