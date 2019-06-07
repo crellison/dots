@@ -2,17 +2,20 @@
 
 ### ALIASES
 
-alias kls="kubectl get"
-alias krm="kubectl delete"
+alias kube="kubectl"
 alias kctx=kubectx
-alias kcat="kubectl describe"
-alias kcd="kubectl use"
-alias klog="kubectl logs"
+alias kls="kube get"
+alias krm="kube delete"
+alias kcat="kube describe"
+alias kcd="kube use"
+alias klog="kube logs"
 
 # copy name of resource
 
 kcp() {
-  kls "$1" | grep "$2" | sed 's/ .*//g' | pbcopy
+  local pod=$(kls "$1" | grep -m 1 "$2" | sed 's/ .*//g')
+  echo $pod | pbcopy 
+  echo "$pod"
 }
 
 # copy endpoints of a service
@@ -24,12 +27,11 @@ kip() {
 # kubernetes - execute bash shell in pod
 
 kbash() {
-  kubectl exec -it "$@" -- /bin/bash
+  kube exec -it "$@" -- /bin/bash
 }
 
 # set namespace in current context
 
 ksetns() {
-  CONTEXT="$(kubectl config current-context)"
-  kubectl config set-context $CONTEXT --namespace=$1
+  kube config set-context --current --namespace=$1
 }
