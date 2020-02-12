@@ -21,8 +21,11 @@ fi
 export PYTHONSTARTUP=$DOTS/.pythonrc
 
 # java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home
 export PATH=/opt/apache-maven-3.6.0/bin:$PATH
+
+# go
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # kubernetes
 source  $DOTS/.kubernetes
@@ -30,3 +33,9 @@ source  $DOTS/.kubernetes
 # good stuff
 source  $DOTS/.aliases
 source  $DOTS/.functions
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/cellison/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cellison/dev/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/cellison/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cellison/dev/google-cloud-sdk/completion.zsh.inc'; fi
