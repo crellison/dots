@@ -35,3 +35,15 @@ kbash() {
 ksetns() {
   kube config set-context --current --namespace=$1
 }
+
+# copy file(s) down from workers
+
+kdl() {
+  local namespace="$1"
+  local pod_name="$2"
+  local file_path="$3"
+  pods=($(kubectl get pods | grep "$pod_name" | cut -f1 -d " "))
+  for pod in $pods; do
+    kubectl cp $namespace/$pod:$file_path ./$pod
+  done
+}
