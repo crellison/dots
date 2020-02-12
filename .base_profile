@@ -18,6 +18,7 @@ source  $DOTS/.work
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+export PYTHONSTARTUP=$DOTS/.pythonrc
 
 # java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home
