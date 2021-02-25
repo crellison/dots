@@ -1,13 +1,13 @@
 # install brew and related packages
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install ack bat drone git mongodb ncdu nvm parallel pyenv pipenv zsh kubernetes gcloud vim
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install ack bat drone git nvm pyenv pipenv zsh kubernetes gcloud vim jenv kubectx
 nvm install --lts
 
 # make zsh default shell
 chsh -s /bin/zsh
 
 # install oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # hook up profiles
 echo "source $HOME/dotfiles/.base_profile" > $HOME/.bash_profile

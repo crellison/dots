@@ -30,12 +30,6 @@ kbash() {
   kube exec -it "$@" -- /bin/bash
 }
 
-# set namespace in current context
-
-ksetns() {
-  kube config set-context --current --namespace=$1
-}
-
 # copy file(s) down from workers
 
 kdl() {

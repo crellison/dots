@@ -5,11 +5,6 @@ alias ndoe="node"
 alias wihch="which"
 alias gti="git"
 
-# CHROME
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
-alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
-
 # PROFILE RELOAD
 alias sbp="source ~/.bash_profile"
 alias szp="source ~/.zshrc"
@@ -58,4 +53,4 @@ alias diskspace_report="df -P -kHl"
 alias fs="stat -f \"%z bytes\""
 
 # Update installed Ruby gems, Homebrew, npm, and their installed packages
-alias brew_update="brew -v update; brew cleanup --prune-prefix; brew doctor; npm-check -g -u"
+alias brew_update="brew -v update; brew cleanup --prune-prefix; brew doctor"

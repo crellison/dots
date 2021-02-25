@@ -24,9 +24,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Highlighting for the sidebar
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-" Fancy start screen. Lets you open empty buffers, multiple files, etc
-Plug 'mhinz/vim-startify'
-
 """ AutoCompletion & Improvements 
 """ =============================================
 
@@ -42,20 +39,8 @@ Plug 'Raimondi/delimitMate'
 " Get Gundo for the undo tree
 Plug 'https://github.com/sjl/gundo.vim'
 
-" Add ack for searching
-Plug 'mileszs/ack.vim'
-
-" Fuzzy File Searching
-Plug 'ctrlpvim/ctrlp.vim'
-
-" Extra Vim syntactic sugar
-Plug 'tpope/vim-eunuch'
-
 """ Language Support 
 """ =============================================
-
-" Julia
-Plug 'JuliaEditorSupport/julia-vim'
 
 " JS/JSX/TS/
 Plug 'leafgarland/typescript-vim'

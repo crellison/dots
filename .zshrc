@@ -3,7 +3,7 @@ export TERM="xterm-256color"
 
 plugins=( zsh-autosuggestions )
 
-ZSH_THEME="blinks"
+ZSH_THEME="refined"
 
 # this goes before oh-my-zsh.sh is sourced
 ZSH_DISABLE_COMPFIX=true
