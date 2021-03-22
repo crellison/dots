@@ -1,7 +1,9 @@
 # install brew and related packages
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install ack bat drone git nvm pyenv pipenv zsh kubernetes gcloud vim jenv kubectx
-nvm install --lts
+brew install ack bat drone git pyenv pipenv zsh kubernetes gcloud vim jenv kubectx
+
+# install nvm
+git clone --depth 1 https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
 
 # make zsh default shell
 chsh -s /bin/zsh
