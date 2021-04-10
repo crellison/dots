@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export TERM="xterm-256color"
 
-plugins=( zsh-autosuggestions )
+plugins=( zsh-autosuggestions z )
 
 ZSH_THEME="refined"
 
@@ -11,6 +11,6 @@ ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 # add z
-.  $HOME/dotfiles/.zsh/z.sh
+.  $HOME/dots/.zsh/z.sh
 
-source $HOME/dotfiles/.base_profile
+source $HOME/dots/.base_profile

@@ -11,10 +11,13 @@ chsh -s /bin/zsh
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# install autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 # hook up profiles
-echo "source $HOME/dotfiles/.base_profile" > $HOME/.bash_profile
-echo "source $HOME/dotfiles/.zshrc" > $HOME/.zshrc
-echo "source $HOME/dotfiles/.vimrc" > $HOME/.vimrc
+echo "source $HOME/dots/.base_profile" > $HOME/.bash_profile
+echo "source $HOME/dots/.zshrc" > $HOME/.zshrc
+echo "source $HOME/dots/.vimrc" > $HOME/.vimrc
 cp ./.gitconfig $HOME/.gitconfig
 
 # reminders of tasks

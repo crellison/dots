@@ -1,6 +1,6 @@
 export  PATH=$HOME/bin:/usr/local/bin:$PATH
 export  PATH=$PATH:/usr/local/go/bin
-export  DOTS=$HOME/dotfiles
+export  DOTS=$HOME/dots
 export  PATH="/usr/local/sbin:$PATH"
 
 # readline

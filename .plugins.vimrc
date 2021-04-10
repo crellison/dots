@@ -7,7 +7,7 @@ call plug#begin('~/.vim/plugged')
 """ Theme 
 """ =============================================
 
-Plug 'kaicataldo/material.vim'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 """ UI Design 
 """ =============================================
