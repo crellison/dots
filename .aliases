@@ -1,10 +1,5 @@
 # ALIASES
 
-# TYPOS
-alias ndoe="node"
-alias wihch="which"
-alias gti="git"
-
 # PROFILE RELOAD
 alias sbp="source ~/.bash_profile"
 alias szp="source ~/.zshrc"
@@ -20,6 +15,7 @@ alias cpbranch="git rev-parse --abbrev-ref HEAD | tr -d '[:space:]' | pbcopy"
 
 # fast grep
 alias fgrep="find . -type f | parallel -k -j150% -n 1000 -m grep -H -n"
+
 ### Stolen from Paul Irish dotfiles
 
 # GIT STUFF
