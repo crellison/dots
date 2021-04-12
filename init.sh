@@ -23,3 +23,4 @@ cp ./.gitconfig $HOME/.gitconfig
 # reminders of tasks
 echo "download jetbrains mono: https://www.jetbrains.com/lp/mono/"
 echo "download go (if applicable): https://golang.org/doc/install"
+echo "run `p10k configure` to set up shell look"

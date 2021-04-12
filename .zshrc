@@ -1,9 +1,9 @@
 export ZSH=$HOME/.oh-my-zsh
 export TERM="xterm-256color"
 
-plugins=( zsh-autosuggestions z )
+plugins=( zsh-autosuggestions )
 
-ZSH_THEME="refined"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # this goes before oh-my-zsh.sh is sourced
 ZSH_DISABLE_COMPFIX=true
