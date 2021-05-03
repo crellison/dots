@@ -1,6 +1,6 @@
-# install brew and related packages
+# install brew and related packages from Brewfile
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install ack bat drone git pyenv pipenv zsh kubernetes gcloud vim jenv kubectx
+brew bundle 
 
 # install nvm
 git clone --depth 1 https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
