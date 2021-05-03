@@ -26,7 +26,7 @@ function clone() {
 }
 
 # git checkout master
-alias master="git checkout master"
+alias master="git checkout master && git reset --hard origin/master && git pull"
 
 # pretty history graph
 alias git_graph="git log --graph --decorate --oneline"
