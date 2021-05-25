@@ -27,6 +27,8 @@ echo "source $HOME/dots/.profile" > $HOME/.zprofile
 cp ./.gitconfig $HOME/.gitconfig
 
 # reminders of tasks
-echo "download jetbrains mono: https://www.jetbrains.com/lp/mono/"
-echo "download go (if applicable): https://golang.org/doc/install"
-echo "run `p10k configure` to set up shell look"
+echo "Install complete. Review the following tasks.
+
+- download jetbrains mono: https://www.jetbrains.com/lp/mono/
+- run 'p10k configure' to set up shell look
+- verify .gitconfig contains the correct user"
