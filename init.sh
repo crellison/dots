@@ -5,6 +5,10 @@ brew bundle
 # install nvm
 git clone --depth 1 https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
 
+# install rust
+echo "installing rust. no need to modify profiles to add ruse CLI's to PATH"
+sh -c "$(curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh)"
+
 # make zsh default shell
 chsh -s /bin/zsh
 
@@ -18,6 +22,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 echo "source $HOME/dots/.base_profile" > $HOME/.bash_profile
 echo "source $HOME/dots/.zshrc" > $HOME/.zshrc
 echo "source $HOME/dots/.vimrc" > $HOME/.vimrc
+echo "source $HOME/dots/.profile" > $HOME/.profile
+echo "source $HOME/dots/.profile" > $HOME/.zprofile
 cp ./.gitconfig $HOME/.gitconfig
 
 # reminders of tasks

@@ -32,6 +32,9 @@ eval "$(rbenv init -)"
 # go
 export PATH=$PATH:$(go env GOPATH)/bin
 
+# rust
+source "$HOME/.cargo/env"
+
 # kubernetes
 source  $DOTS/.kubernetes
 
