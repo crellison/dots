@@ -3,9 +3,7 @@ export  PATH=$PATH:/usr/local/go/bin
 export  DOTS=$HOME/dots
 export  PATH="/usr/local/sbin:$PATH"
 
-# readline
-export  LDFLAGS="-L/usr/local/opt/readline/lib"
-export  CPPFLAGS="-I/usr/local/opt/readline/include"
+export EDITOR='code'
 
 # nvm
 export NVM_LAZY_LOAD=true
@@ -20,6 +18,10 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 export PYTHONSTARTUP=$DOTS/.pythonrc
+
+# use brew versions of things
+export  LDFLAGS="-L/usr/local/opt/readline/lib"
+export  CPPFLAGS="-I/usr/local/opt/readline/include"
 
 # jenv setup
 export PATH="$HOME/.jenv/bin:$PATH"
