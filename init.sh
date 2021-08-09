@@ -26,6 +26,8 @@ echo "source $HOME/dots/.profile" > $HOME/.profile
 echo "source $HOME/dots/.profile" > $HOME/.zprofile
 cp ./.gitconfig $HOME/.gitconfig
 
+./configure-osx.sh
+
 # reminders of tasks
 echo "Install complete. Review the following tasks.
 
