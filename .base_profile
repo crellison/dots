@@ -3,8 +3,6 @@ export  PATH=$PATH:/usr/local/go/bin
 export  DOTS=$HOME/dots
 export  PATH="/usr/local/sbin:$PATH"
 
-export EDITOR='code'
-
 # nvm
 export NVM_LAZY_LOAD=true
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=("git")
