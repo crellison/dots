@@ -25,6 +25,12 @@ function clone() {
     cd $(basename ${1%.*})
 }
 
+# interactive rebase. use trunk branch for all commits on current branch
+alias gr="git rebase -i"
+
+# make a fixup commit for auto-squashing
+alias gf="git commit --fixup"
+
 # git checkout master
 alias master="git checkout master && git reset --hard origin/master && git pull origin master"
 

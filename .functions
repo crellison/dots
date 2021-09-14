@@ -59,8 +59,3 @@ function prune_all() {
   cd $initialdir
 }
 
-# rebase last x commits on local branch **not on master**
-function gs() {
-    git rebase -i HEAD~$1
-}
-
