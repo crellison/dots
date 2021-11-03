@@ -1,12 +1,5 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin
 export DOTS=$HOME/dots
-export PATH="/usr/local/sbin:$PATH"
-
-# nvm
-export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=("git")
-source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+path+=("$HOME/bin" "/usr/local/bin" "/usr/local/sbin")
 
 # work
 source $DOTS/.work
@@ -22,7 +15,7 @@ export LDFLAGS="-L/usr/local/opt/readline/lib"
 export CPPFLAGS="-I/usr/local/opt/readline/include"
 
 # jenv setup
-export PATH="$HOME/.jenv/bin:$PATH"
+path+=("$HOME/.jenv/bin")
 eval "$(jenv init -)"
 
 # rbenv
@@ -30,7 +23,8 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 eval "$(rbenv init -)"
 
 # go
-export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH="$HOME/go"
+path+=("$GOPATH/bin" "/usr/local/go/bin")
 
 # rust
 source "$HOME/.cargo/env"
@@ -44,3 +38,5 @@ source $DOTS/.gcs
 # good stuff
 source $DOTS/.aliases
 source $DOTS/.functions
+
+export PATH
