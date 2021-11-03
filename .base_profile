@@ -1,6 +1,9 @@
 export DOTS=$HOME/dots
 path+=("$HOME/bin" "/usr/local/bin" "/usr/local/sbin")
 
+# fnm (instead of nvm)
+eval "$(fnm env)"
+
 # work
 source $DOTS/.work
 
