@@ -1,7 +1,7 @@
-export  PATH=$HOME/bin:/usr/local/bin:$PATH
-export  PATH=$PATH:/usr/local/go/bin
-export  DOTS=$HOME/dots
-export  PATH="/usr/local/sbin:$PATH"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
+export DOTS=$HOME/dots
+export PATH="/usr/local/sbin:$PATH"
 
 # nvm
 export NVM_LAZY_LOAD=true
@@ -9,7 +9,7 @@ export NVM_LAZY_LOAD_EXTRA_COMMANDS=("git")
 source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 
 # work
-source  $DOTS/.work
+source $DOTS/.work
 
 # pyenv setup
 if command -v pyenv 1>/dev/null 2>&1; then
@@ -18,8 +18,8 @@ fi
 export PYTHONSTARTUP=$DOTS/.pythonrc
 
 # use brew versions of things
-export  LDFLAGS="-L/usr/local/opt/readline/lib"
-export  CPPFLAGS="-I/usr/local/opt/readline/include"
+export LDFLAGS="-L/usr/local/opt/readline/lib"
+export CPPFLAGS="-I/usr/local/opt/readline/include"
 
 # jenv setup
 export PATH="$HOME/.jenv/bin:$PATH"
@@ -36,11 +36,11 @@ export PATH=$PATH:$(go env GOPATH)/bin
 source "$HOME/.cargo/env"
 
 # kubernetes
-source  $DOTS/.kubernetes
+source $DOTS/.kubernetes
 
 # google cloud
-source  $DOTS/.gcs
+source $DOTS/.gcs
 
 # good stuff
-source  $DOTS/.aliases
-source  $DOTS/.functions
+source $DOTS/.aliases
+source $DOTS/.functions
