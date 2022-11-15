@@ -26,8 +26,8 @@ kip() {
 
 # kubernetes - execute bash shell in pod
 
-kbash() {
-  kube exec -it "$@" -- /bin/bash
+ksh() {
+  kube exec -it "$@" -- /bin/sh
 }
 
 # copy file(s) down from workers
