@@ -6,6 +6,7 @@ alias szp="source ~/.zshrc"
 
 # better cat
 alias cat="bat"
+export BAT_THEME="GitHub"
 
 # make zip recursive
 alias zip="zip -r"
@@ -29,7 +30,7 @@ function clone() {
 alias gr="git rebase -i"
 
 # make a fixup commit for auto-squashing
-alias gf="git commit --fixup"
+alias gf="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --no-verify --fixup"
 
 # git checkout master
 alias master="git checkout master && git reset --hard origin/master && git pull origin master"
