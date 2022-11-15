@@ -125,7 +125,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 """ Syntax Theme
 colorscheme material
-let g:material_theme_style='dark'
+let g:material_theme_style='lighter'
 
 syntax on
 
