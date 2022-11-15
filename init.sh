@@ -32,4 +32,5 @@ echo "Install complete. Review the following tasks.
 
 - download jetbrains mono: https://www.jetbrains.com/lp/mono/
 - run 'p10k configure' to set up shell look
-- verify .gitconfig contains the correct user"
+- verify .gitconfig contains the correct user
+- install sdkman: https://sdkman.io/"
