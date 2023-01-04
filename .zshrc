@@ -24,6 +24,9 @@ path+=("$HOME/bin" "/usr/local/bin" "/usr/local/sbin")
 # rust
 source "$HOME/.cargo/env"
 
+# gcp
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+
 source $DOTS/.work
 source $DOTS/.kubernetes
 source $DOTS/.aliases
