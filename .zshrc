@@ -19,13 +19,11 @@ export DOTS=$HOME/dots
 path+=("$HOME/bin" "/usr/local/bin" "/usr/local/sbin")
 
 # asdf for all tool/language version management
-. /usr/local/opt/asdf/libexec/asdf.sh
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
 
 # rust
 source "$HOME/.cargo/env"
-
-# gcp
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 
 source $DOTS/.work
 source $DOTS/.kubernetes
@@ -33,3 +31,11 @@ source $DOTS/.aliases
 source $DOTS/.functions
 
 export PATH
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/cellison/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cellison/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/cellison/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cellison/google-cloud-sdk/completion.zsh.inc'; fi
