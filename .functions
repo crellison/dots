@@ -63,3 +63,11 @@ function prune_all() {
 function git_arborist() {
   git branch | grep -e $1 | xargs git branch -D
 }
+
+# file batch rename
+rename() {
+    for i in $1*
+    do
+        mv "$i" "${i/$1/$2}"
+    done
+}
