@@ -27,7 +27,13 @@ function clone() {
 }
 
 # interactive rebase. use trunk branch for all commits on current branch
-alias gr="git rebase -i"
+function gr() {
+    local git_status=$(git status --porcelain)
+
+    [[ ! -z "$git_status" ]] && git stash
+    git rebase -i $1
+    [[ ! -z "$git_status" ]] && git stash pop
+}
 
 # make a fixup commit for auto-squashing
 alias gf="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --no-verify --fixup"
