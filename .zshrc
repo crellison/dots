@@ -21,6 +21,7 @@ path+=("$HOME/bin" "/usr/local/bin" "/usr/local/sbin")
 # asdf for all tool/language version management
 . "$HOME/.asdf/asdf.sh"
 . "$HOME/.asdf/completions/asdf.bash"
+export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_installed
 
 # rust
 source "$HOME/.cargo/env"
