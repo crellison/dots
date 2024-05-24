@@ -1,9 +1,18 @@
-[user]
-	email = cole.ellison@gmail.com
-	name = Cole Ellison
 [rerere]
 	enabled = true
+	autoUpdate = true
 [branch]
 	autosetuprebase = always
+[column]
+	ui = auto
 [push]
 	default = current
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[includeIf "gitdir:~/work"]
+	path = ~/.gitconfig-work
+[includeIf "gitdir:~/dev"]
+	path = ~/.gitconfig-oss
