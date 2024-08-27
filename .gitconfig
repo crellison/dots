@@ -1,6 +1,8 @@
 [rerere]
 	enabled = true
 	autoUpdate = true
+[rebase]
+  autosquash = true
 [branch]
 	autosetuprebase = always
 [column]
@@ -12,7 +14,13 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[includeIf "gitdir:~/work"]
-	path = ~/.gitconfig-work
-[includeIf "gitdir:~/dev"]
-	path = ~/.gitconfig-oss
+[alias]
+	arborist = !git branch | grep -e $1 | xargs git branch -D
+  fixup = !git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup
+	get-trunk = !git symbolic-ref refs/remotes/origin/HEAD --short | sed 's/origin\\///'
+	trunk = !git switch `git get-trunk` && git reset --hard origin/`git get-trunk` && git pull --set-upstream origin `git get-trunk`
+	cleanup = !git trunk && git branch --merged | grep -v `git get-trunk` | xargs git branch -d
+[includeIf "gitdir:~/work/"]
+	path = ~/work.gitconfig
+[includeIf "gitdir:~/dev/"]
+	path = ~/oss.gitconfig

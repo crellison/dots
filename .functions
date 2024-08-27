@@ -59,11 +59,6 @@ function prune_all() {
   cd $initialdir
 }
 
-# delete branches by regex
-function git_arborist() {
-  git branch | grep -e $1 | xargs git branch -D
-}
-
 # file batch rename
 rename() {
     for i in $1*
