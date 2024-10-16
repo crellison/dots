@@ -20,6 +20,7 @@
 	get-trunk = !git symbolic-ref refs/remotes/origin/HEAD --short | sed 's/origin\\///'
 	trunk = !git switch `git get-trunk` && git reset --hard origin/`git get-trunk` && git pull --set-upstream origin `git get-trunk`
 	cleanup = !git trunk && git branch --merged | grep -v `git get-trunk` | xargs git branch -d
+	entr = !git ls-files -cdmo --exclude-standard | entr -d "$@"
 [includeIf "gitdir:~/work/"]
 	path = ~/work.gitconfig
 [includeIf "gitdir:~/dev/"]
